@@ -6,9 +6,9 @@ extends Sprite2D
 const LOG_SCENE = preload("res://scenes/pickables/log.tscn")
 
 func _on_hurt_on_hurt(dmg_amount: Variant) -> void:
-	health.apply_damage( dmg_amount )
-	material.set_shader_parameter('intensity' , 0.5 )
-	await get_tree().create_timer( 1.0 ).timeout
+	await get_tree().create_timer( 0.3 ).timeout
+	material.set_shader_parameter('intensity' , 1.0 )
+	await get_tree().create_timer( 0.3 ).timeout
 	material.set_shader_parameter('intensity' , 0.0 )
 	health.apply_damage( dmg_amount )
 
@@ -18,5 +18,9 @@ func _on_health_max_dmg_reached() -> void:
 	
 func add_log_scene() -> void:
 	var log_inst = LOG_SCENE.instantiate() as Node2D
+	log_inst.global_position = global_position
+	get_parent().add_child( log_inst )
+	
+	log_inst = LOG_SCENE.instantiate() as Node2D
 	log_inst.global_position = global_position
 	get_parent().add_child( log_inst )

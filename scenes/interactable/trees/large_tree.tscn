@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://6rcay756qqj8" path="res://components/hurt.tscn" id="2_bm47t"]
 [ext_resource type="Script" path="res://scenes/interactable/trees/large_tree.gd" id="2_ynueg"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_4yo61"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nnwx2"]
 resource_local_to_scene = true
 shader = ExtResource("1_remnf")
 shader_parameter/intensity = 0.0
@@ -22,7 +22,7 @@ region = Rect2(16, 0, 32, 32)
 radius = 4.0
 
 [node name="LargeTree" type="Sprite2D"]
-material = SubResource("ShaderMaterial_4yo61")
+material = SubResource("ShaderMaterial_nnwx2")
 position = Vector2(0, -9)
 texture = SubResource("AtlasTexture_vqjft")
 script = ExtResource("2_ynueg")
