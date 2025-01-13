@@ -6,5 +6,6 @@ extends Area2D
 signal on_hurt( dmg_amount )
 
 func _on_area_entered( area: HitComponent ) -> void:
+	print("Hitting")
 	if( tool == area.get_tool() ):
 		on_hurt.emit( area.get_dmg() )

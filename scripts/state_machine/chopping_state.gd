@@ -18,20 +18,20 @@ func _on_physics_process(_delta : float) -> void:
 	pass
 
 func _on_next_transitions() -> void:
-	if( !anim_sprite.is_playing() ):
+	if( !animSprite.is_playing() ):
 		transition.emit("IDLE")
 
 func _on_enter() -> void:
-	var direction = player.get_direction()
+	var direction = character.get_direction()
 
 	hit_comp_collider.disabled = false
 	hit_comp_collider.position = directionAnimMap[direction]['offset']
 
-	anim_sprite.play( directionAnimMap[direction]['animation'] )
-	await anim_sprite.animation_finished
+	animSprite.play( directionAnimMap[direction]['animation'] )
+	await animSprite.animation_finished
 
 func _on_exit():
-	anim_sprite.stop()
+	animSprite.stop()
 	hit_comp_collider.disabled = true
 	hit_comp_collider.position = Vector2.ZERO
 	

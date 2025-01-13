@@ -401,9 +401,13 @@ radius = 4.0
 radius = 5.0
 
 [node name="Player" type="CharacterBody2D"]
+y_sort_enabled = true
 collision_layer = 2
 collision_mask = 5
 script = ExtResource("1_e1svu")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+avoidance_enabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -8)
@@ -427,35 +431,36 @@ debug_color = Color(0.915154, 0.184429, 0.559892, 0.42)
 
 [node name="NodeStateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_node_state")]
 script = ExtResource("3_d8q2d")
-initial_node_state = NodePath("IDLE")
+initial_node_state = NodePath("Idle")
+typeId = "PLAYER"
 
-[node name="WALK" type="Node" parent="NodeStateMachine" node_paths=PackedStringArray("player", "anim_sprite", "hit_comp_collider")]
+[node name="Walk" type="Node" parent="NodeStateMachine" node_paths=PackedStringArray("character", "animSprite", "hit_comp_collider")]
 script = ExtResource("4_8ro5l")
 speed = 100
-player = NodePath("../..")
-anim_sprite = NodePath("../../AnimatedSprite2D")
+character = NodePath("../..")
+animSprite = NodePath("../../AnimatedSprite2D")
 hit_comp_collider = NodePath("../../HitComponent/CollisionShape2D")
 
-[node name="IDLE" type="Node" parent="NodeStateMachine" node_paths=PackedStringArray("player", "anim_sprite", "hit_comp_collider")]
+[node name="Idle" type="Node" parent="NodeStateMachine" node_paths=PackedStringArray("character", "animSprite", "hit_comp_collider")]
 script = ExtResource("4_4rtfj")
-player = NodePath("../..")
-anim_sprite = NodePath("../../AnimatedSprite2D")
+character = NodePath("../..")
+animSprite = NodePath("../../AnimatedSprite2D")
 hit_comp_collider = NodePath("../../HitComponent/CollisionShape2D")
 
-[node name="WATERING" type="Node" parent="NodeStateMachine" node_paths=PackedStringArray("player", "anim_sprite", "hit_comp_collider")]
+[node name="Watering" type="Node" parent="NodeStateMachine" node_paths=PackedStringArray("character", "animSprite", "hit_comp_collider")]
 script = ExtResource("7_yn7ed")
-player = NodePath("../..")
-anim_sprite = NodePath("../../AnimatedSprite2D")
+character = NodePath("../..")
+animSprite = NodePath("../../AnimatedSprite2D")
 hit_comp_collider = NodePath("../../HitComponent/CollisionShape2D")
 
-[node name="TILLING" type="Node" parent="NodeStateMachine" node_paths=PackedStringArray("player", "anim_sprite", "hit_comp_collider")]
+[node name="Tilling" type="Node" parent="NodeStateMachine" node_paths=PackedStringArray("character", "animSprite", "hit_comp_collider")]
 script = ExtResource("8_iry3b")
-player = NodePath("../..")
-anim_sprite = NodePath("../../AnimatedSprite2D")
+character = NodePath("../..")
+animSprite = NodePath("../../AnimatedSprite2D")
 hit_comp_collider = NodePath("../../HitComponent/CollisionShape2D")
 
-[node name="CHOPPING" type="Node" parent="NodeStateMachine" node_paths=PackedStringArray("player", "anim_sprite", "hit_comp_collider")]
+[node name="Chopping" type="Node" parent="NodeStateMachine" node_paths=PackedStringArray("character", "animSprite", "hit_comp_collider")]
 script = ExtResource("6_hebfs")
-player = NodePath("../..")
-anim_sprite = NodePath("../../AnimatedSprite2D")
+character = NodePath("../..")
+animSprite = NodePath("../../AnimatedSprite2D")
 hit_comp_collider = NodePath("../../HitComponent/CollisionShape2D")

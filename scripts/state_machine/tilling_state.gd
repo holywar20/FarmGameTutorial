@@ -14,10 +14,10 @@ func _on_physics_process(_delta : float) -> void:
 	pass
 
 func _on_next_transitions() -> void:
-	if( !anim_sprite.is_playing() ):
+	if( !animSprite.is_playing() ):
 		transition.emit("IDLE")
 
 func _on_enter() -> void:
-	var direction = player.get_direction()
+	var direction = character.get_direction()
 	
-	anim_sprite.play( directionAnimMap[direction] )
+	animSprite.play( directionAnimMap[direction] )

@@ -10,9 +10,9 @@ var directionAnimMap : Dictionary = {
 
 # This table reflects valid transitions from idle to some other state
 var toolTransitionMap : Dictionary = {
-	DataTypes.Tools.AXE_WOOD : "CHOPPING",
-	DataTypes.Tools.TILL_GROUND : "TILLING",
-	DataTypes.Tools.WATER_CROPS : "WATERING"
+	DataTypes.Tools.AXE_WOOD : "Chopping",
+	DataTypes.Tools.TILL_GROUND : "Tilling",
+	DataTypes.Tools.WATER_CROPS : "Watering"
 }
 
 func _on_process(_delta : float) -> void:
@@ -22,17 +22,17 @@ func _on_physics_process(_delta : float) -> void:
 	direction = GameInputEvents.movement_input()
 		
 	if( direction != Vector2.ZERO ):
-		player.set_direction( direction )
+		character.set_direction( direction )
 	else:
-		direction = player.get_direction()
+		direction = character.get_direction()
 		
-	anim_sprite.play( directionAnimMap[direction] )
+	animSprite.play( directionAnimMap[direction] )
 
 func _on_next_transitions() -> void:
 	if( GameInputEvents.is_movement_input() ):
-		transition.emit("WALK")
+		transition.emit("Walk")
 	
-	var tool = player.get_current_tool()
+	var tool = character.get_current_tool()
 	if( GameInputEvents.is_using_tool() ):
 		if( toolTransitionMap.has( tool ) ):
 			transition.emit( toolTransitionMap[tool] )
