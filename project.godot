@@ -23,6 +23,10 @@ window/size/window_height_override=720
 window/stretch/mode="canvas_items"
 window/stretch/scale_mode="integer"
 
+[global_group]
+
+navigation_polygon_source_geometry_group="Nav Region"
+
 [input]
 
 walk_up={
@@ -61,6 +65,7 @@ use_tool={
 2d_physics/layer_5="Objects"
 2d_physics/layer_6="Collectables"
 2d_physics/layer_7="FarmAnimals"
+avoidance/layer_1="NPCs"
 
 [rendering]
 

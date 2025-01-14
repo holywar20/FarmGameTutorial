@@ -406,6 +406,8 @@ collision_layer = 2
 collision_mask = 5
 script = ExtResource("1_e1svu")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 avoidance_enabled = true
 
