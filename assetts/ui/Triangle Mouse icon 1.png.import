@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dle6sv8qfql3g"
-path="res://.godot/imported/Teemo Basic emote animations sprite sheet.png-ed413195b7b71add310523a73dd7afe7.ctex"
+uid="uid://cfqv0iivsmy4c"
+path="res://.godot/imported/Triangle Mouse icon 1.png-018779d45b6b0ba6b7428d6f76a15d67.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assetts/ui/Sprite sheets/Dialouge UI/Emotes/Teemo Basic emote animations sprite sheet.png"
-dest_files=["res://.godot/imported/Teemo Basic emote animations sprite sheet.png-ed413195b7b71add310523a73dd7afe7.ctex"]
+source_file="res://assetts/ui/Triangle Mouse icon 1.png"
+dest_files=["res://.godot/imported/Triangle Mouse icon 1.png-018779d45b6b0ba6b7428d6f76a15d67.ctex"]
 
 [params]
 

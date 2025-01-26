@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dl0jfpfwmo7yb"
-path="res://.godot/imported/Sprite sheet for Basic Pack.png-674f0e55aea0f2a563a596722ce6e97b.ctex"
+path="res://.godot/imported/Sprite sheet for Basic Pack.png-f953d0debfeb6f3d68406215ec2e80a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assetts/ui/Sprite sheets/Sprite sheet for Basic Pack.png"
-dest_files=["res://.godot/imported/Sprite sheet for Basic Pack.png-674f0e55aea0f2a563a596722ce6e97b.ctex"]
+source_file="res://assetts/ui/Sprite sheet for Basic Pack.png"
+dest_files=["res://.godot/imported/Sprite sheet for Basic Pack.png-f953d0debfeb6f3d68406215ec2e80a1.ctex"]
 
 [params]
 

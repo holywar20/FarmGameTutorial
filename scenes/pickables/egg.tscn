@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dl2cbwrgks1kt"]
+
+[ext_resource type="Texture2D" uid="uid://bed0cylb186ag" path="res://assetts/Objects/Egg_item.png" id="1_2djoh"]
+[ext_resource type="PackedScene" uid="uid://yh433ufxkprr" path="res://components/pickable.tscn" id="2_i7tpk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6b1oe"]
+radius = 8.01561
+
+[node name="Egg" type="Sprite2D"]
+texture = ExtResource("1_2djoh")
+
+[node name="Pickable" parent="." instance=ExtResource("2_i7tpk")]
+c_name = "EGG"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pickable"]
+position = Vector2(0, -0.5)
+shape = SubResource("CircleShape2D_6b1oe")
+debug_color = Color(0.7, 0.478333, 0, 0.419608)

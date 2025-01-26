@@ -6,3 +6,4 @@ class_name Pickable
 func _on_body_entered( body : Node2D ) -> void:
 	if body is Player:
 		get_parent().queue_free()
+		print("picked up" , c_name )

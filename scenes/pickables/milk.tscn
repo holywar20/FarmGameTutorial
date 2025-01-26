@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmshhhe1onnqo"]
+
+[ext_resource type="Texture2D" uid="uid://civknqvr461di" path="res://assetts/Objects/Simple_Milk_and_grass_item.png" id="1_omaub"]
+[ext_resource type="PackedScene" uid="uid://yh433ufxkprr" path="res://components/pickable.tscn" id="2_bylcn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ovlt"]
+atlas = ExtResource("1_omaub")
+region = Rect2(33, 0, 14, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y2mjf"]
+radius = 3.0
+
+[node name="Stone" type="Sprite2D"]
+texture = SubResource("AtlasTexture_8ovlt")
+
+[node name="Pickable" parent="." instance=ExtResource("2_bylcn")]
+c_name = "MILK"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pickable"]
+position = Vector2(-1, -2)
+shape = SubResource("CircleShape2D_y2mjf")
+debug_color = Color(0.941881, 1.02037e-05, 0.608625, 0.42)

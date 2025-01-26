@@ -7,5 +7,8 @@ class_name HitComponent
 func get_tool() -> DataTypes.Tools:
 	return tool
 
+func setTool( nTool : DataTypes.Tools ) -> void:
+	tool = nTool
+
 func get_dmg() -> int:
 	return dmg

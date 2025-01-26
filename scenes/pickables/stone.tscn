@@ -14,6 +14,7 @@ radius = 3.0
 texture = SubResource("AtlasTexture_fi0lr")
 
 [node name="Pickable" parent="." instance=ExtResource("2_6fnv8")]
+c_name = "STONE"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pickable"]
 position = Vector2(-1, -2)

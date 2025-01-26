@@ -15,7 +15,7 @@ func _on_physics_process(_delta : float) -> void:
 
 func _on_next_transitions() -> void:
 	if( !animSprite.is_playing() ):
-		transition.emit("IDLE")
+		transition.emit("Idle")
 
 func _on_enter() -> void:
 	var direction = character.get_direction()
